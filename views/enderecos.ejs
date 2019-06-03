@@ -1,0 +1,11 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+    <h1>Endereços com Suite</h1>
+    <h4>Usuários ricos com suite:</h4>
+    <% enderecos.forEach((user)=>{ %>
+    <li><%= user["name"]%>, <%= user["address"]["suite"]%></li>
+    <% }); %>
+</div>
+
+<% include partials/footer.ejs %>

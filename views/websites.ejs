@@ -1,0 +1,11 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+    <h1>Show</h1>
+
+    <% website.forEach((user)=>{ %>
+    <li><%= user["name"]%> - <%= user["website"]%></li>
+    <% }); %>
+</div>
+
+<% include partials/footer.ejs %>
