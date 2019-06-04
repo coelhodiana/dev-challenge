@@ -19,6 +19,7 @@ app.get("/contatos", (req, res)=>{
     request("https://jsonplaceholder.typicode.com/users", (error, response, body) =>{
         if (!error && response.statusCode == 200){
             var contatos = JSON.parse(body);
+            contatos.sort((a, b) => (a.name > b.name) ? 1 : -1)
             res.render("contatos", {contatos: contatos});
         }
     });
